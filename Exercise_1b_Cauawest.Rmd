@@ -1,0 +1,49 @@
+---
+title: "Cauawest_Exercise_1b"
+author: "Cauã Westmann"
+date: "26/09/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+**Data generation**
+
+Here, we create a vector of 100 random numbers from a log-normal distribution
+
+mu=1
+
+sigma=0.25
+
+```{r}
+#Seed is set for reproducibility
+set.seed(42)
+#Random naumbers generation
+random_numbers<-rlnorm(n = 100, meanlog = 1, sdlog = 0.25)
+```
+
+**Plot Generation**
+
+Here, we create a histogram and a scatterplot of random_numbers on the log scale:
+```{r}
+#Histogram
+hist(log(random_numbers))
+#Scatterplot
+plot(log(random_numbers))
+```
+
+**Mean and variance**
+
+Here, we calculate the mean and the variance of the sample:
+
+```{r}
+#Mean
+mean(random_numbers)
+#Variance
+var(random_numbers)
+```
+Mean is 2.830188
+
+Variance is 0.495925
